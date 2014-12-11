@@ -12,11 +12,9 @@ export default Ember.Component.extend({
     if(this.get('show') && !this.get('week')) {
       this.set('loading', true);
       var component = this;
-      Ember.run.next(function() {
-        Ember.$.getJSON('http://localhost:8000/').then(function(data) {
-          component.set('loading', false);
-          component.set('week', data);
-        });
+      Ember.fakeGet().then(function(data) {
+        component.set('loading', false);
+        component.set('week', data);
       });
     }
   }.observes('show')

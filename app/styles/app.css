@@ -1,3 +1,21 @@
-html, body {
-  margin: 20px;
+.outer {
+  width: 1000px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.container {
+  left:0px;
+  position: relative;
+  width: 26000px;
+  height:100px;
+  transition-property: left;
+  transition-duration: .5s;
+}
+
+.week {
+  width: 250px;
+  height: 100px;
+  border: 1px black solid;
+  float: left;
 }
